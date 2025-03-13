@@ -7,7 +7,7 @@ import { io } from 'socket.io-client';
   templateUrl: './remote.component.html',
   styleUrl: './remote.component.css'
 })
-export class RemoteComponent {
+export class RemoteComponent implements OnInit{
   private socket = io("https://wevc.onrender.com");
   private localStream!: MediaStream;
   private peerConnection!: RTCPeerConnection;
